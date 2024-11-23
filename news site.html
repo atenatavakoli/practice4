@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>shariati news site</title>
+    </head>
+    <body>
+        <style>
+                html, body, div, span, applet, object, iframe,
+                h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                a, abbr, acronym, address, big, cite, code,
+                del, dfn, em, img, ins, kbd, q, s, samp,
+                small, strike, strong, sub, sup, tt, var,
+                b, u, i, center,
+                dl, dt, dd, ol, ul, li,
+                fieldset, form, label, legend,
+                table, caption, tbody, tfoot, thead, tr, th, td,
+                article, aside, canvas, details, embed, 
+                figure, figcaption, footer, header, hgroup, 
+                menu, nav, output, ruby, section, summary,
+                time, mark, audio, video {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                }
+                article, aside, details, figcaption, figure, 
+                footer, header, hgroup, menu, nav, section {
+                    display: block;
+                }
+                body {
+                    line-height: 1;
+                }
+                ol, ul {
+                    list-style: none;
+                }
+                blockquote, q {
+                    quotes: none;
+                }
+                blockquote:before, blockquote:after,
+                q:before, q:after {
+                    content: '';
+                    content: none;
+                }
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+        </style>
+        <style>
+            .header{
+                background-color: greenyellow;
+                border-bottom: 7px solid yellow;
+                padding: 5px;
+            }
+            .flex{
+                display: flex;
+                gap: 15px;
+            }
+            .nav-link{
+            position: relative;
+              font-size: 30px;
+              text-decoration: none; 
+              color: purple;
+            }
+            .nav-link:after{
+                content: " ";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 0;
+                height: 5px;
+                background-color: yellow;
+                transition: 0.5s;
+            }
+            .nav-link:hover:after{
+                width: 100%;   
+            }
+            .button-49,
+            .button-49:after {
+            width: 76px;
+            height: 76px;
+            line-height: 78px;
+            font-size: 20px;
+            font-family: 'Bebas Neue', sans-serif;
+            background: linear-gradient(45deg, transparent 5%, purple 5%);
+            border: 0;
+            color: #fff;
+            letter-spacing: 3px;
+            box-shadow: 6px 0px 0px yellow;
+            outline: transparent;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            }
+            .button-49:after {
+            --slice-0: inset(50% 50% 50% 50%);
+            --slice-1: inset(80% -6px 0 0);
+            --slice-2: inset(50% -6px 30% 0);
+            --slice-3: inset(10% -6px 85% 0);
+            --slice-4: inset(40% -6px 43% 0);
+            --slice-5: inset(80% -6px 5% 0);
+
+            content: 'ALTERNATE TEXT';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 3%, yellow 3%, yellow 5%, purple 5%);
+            text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px yellow;
+            clip-path: var(--slice-0);
+            }
+            .button-49:hover:after {
+            animation: 1s glitch;
+            animation-timing-function: steps(2, end);
+            }
+            @keyframes glitch {
+            0% {
+                clip-path: var(--slice-1);
+                transform: translate(-20px, -10px);
+            }
+            10% {
+                clip-path: var(--slice-3);
+                transform: translate(10px, 10px);
+            }
+            20% {
+                clip-path: var(--slice-1);
+                transform: translate(-10px, 10px);
+            }
+            30% {
+                clip-path: var(--slice-3);
+                transform: translate(0px, 5px);
+            }
+            40% {
+                clip-path: var(--slice-2);
+                transform: translate(-5px, 0px);
+            }
+            50% {
+                clip-path: var(--slice-3);
+                transform: translate(5px, 0px);
+            }
+            60% {
+                clip-path: var(--slice-4);
+                transform: translate(5px, 10px);
+            }
+            70% {
+                clip-path: var(--slice-2);
+                transform: translate(-10px, 10px);
+            }
+            80% {
+                clip-path: var(--slice-5);
+                transform: translate(20px, -10px);
+            }
+            90% {
+                clip-path: var(--slice-1);
+                transform: translate(-10px, 0px);
+            }
+            100% {
+                clip-path: var(--slice-1);
+                transform: translate(0);
+            }
+            }
+            @media (min-width: 768px) {
+            .button-49,
+            .button-49:after {
+                width: 120px;
+                height: 86px;
+                line-height: 88px;
+            }
+            }
+            footer{
+                padding: 10px;
+                background-color: #f5f5f5;
+            }
+            footer ul li span {
+                font-size: 22px;
+                color: #3d3b3b;
+                font-weight: bold;
+                text-transform: capitalize;
+            } 
+            footer ul li a{
+                margin: 5px 0;
+                padding-left: 10px;
+            }
+        </style>
+        <header class="header flex">
+            <nav class="flex" style="flex-grow: 1;justify-content: space-between;align-items: center;">
+                <ul class="flex" style="list-style: none">
+                    <li>
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Contact US</a>
+                    </li>
+                </ul>
+                <div>
+                    <button class="button-49"><a href="file:///E:/atena/uni/html/user.html">Sign in</button></a>
+                    <button class="button-49"><a href="file:///E:/atena/uni/html/user.html">Sign up</button></a>
+                </div>
+            </nav>
+        </header>
+        <main>
+           <section class="flex" style="gap: 10px;">
+                <div class="flex" style="flex-direction: column; background-color: aquamarine;">
+                    <h1 style="font-weight: bold; font-size: 35px; color: purple;">Holding a Dart Competition of the Fall Sports Olympiad for employees:</h1>
+                    <small style="color: purple ;font-size: 25px;">
+                        Informs that the fall sports olympiad for male and female employees and professors in the field of darts will be held in the following order:
+                    </small>
+                    <p style="line-height: 10px; font-size: 20px ; color: purple;">
+                        -Competition of female staff and teachers =>
+                        Day and date: Saturday, AZAR 3, 1403 =>
+                        Time: 13-14 =>
+                        Venue: Milad Hall
+                    </p>
+                    <p style="line-height: 10px; font-size: 20px ; color: purple;">
+                        -Man staff and professors competition =>
+                        Day and date: Monday, AZAR 5, 1403 =>
+                        Time: 13-14 =>
+                        Venue: Milad Hall
+                    </p>
+                    <p style="line-height: 10px; font-size: 20px; color: purple;">
+                        -All those interested are invited to attend according to the schedule.
+                    </p>
+                    <p style="line-height: 10px; font-size: 20px; color: purple;">
+                        _Last updated : ABAN 30, 1403 13:55.
+                    </p>
+                </div>
+                <div>
+                    <img src="darts.webp" alt="darts competition" title="dart competition" width="230" height="230"/>
+                </div>
+           </section>
+           <section style="border-top: 7px solid yellow ;">
+           </section>
+        </main>
+        <footer>
+            <div style="text-align: center; background-color: lightsalmon;">
+                <p style="margin-bottom: 0; color: purple; font-size: 20px;">If you have any suggestion about my first experience,I will be happy to hear that on: @a-pluto-134340 (telegram) </p>
+                <p style="margin-bottom: 0; color: purple; font-size: 20px;">made by atena tavakoli</p>
+                <img src="kitten.webp" alt="kitten" title="kitten" width="700" height="500"/>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>user</title>
+    </head>
+    <body>
+        <style>
+            .text-center{
+                text-align: center;
+                font-size: 64px;
+            }
+            .basic-input{
+                height: 37px;
+                font-size: 27px;
+                border-radius: 23px;
+                padding-left: 7px;
+                border: unset;
+                background-color: palegreen;
+            }
+            .basic-input:active,.basic-input:focus,.basic-input:focus-visible{
+                background-color: rgb(200, 235, 121);
+                outline: 0;
+                border: 0;
+            }
+            .gaming-button{
+                background-color: aqua;
+                border: none;
+                color: inherit;
+                cursor: pointer;
+                font-size: 22px;
+                padding: 0px;
+                color:  purple;
+                width: 250px;
+                height: 60px;
+                border-radius: 0px;
+                background-image: url(./bg.png);
+                border-image: url(./border.png);
+                border: 7px solid yellow;
+                font-weight: bold;
+            }
+        </style>
+        <h1 class="text-center" style="color: yellow; background-color: purple;">
+            Enter Your Information :)
+        </h1>
+        <form method="post" action="file:///E:/atena/uni/html/news%20site.html#">
+            <input type="text" id="input-name" class="basic-input" name="input-text" placeholder="enter your name" required/><br/>
+            <input type="password" class="basic-input" name="input-pass" placeholder="enter your password" required /><br/>
+            <input type="email" class="basic-input" name="input-pass" placeholder="enter your email" required /><br/>
+            <input type="number" class="basic-input" name="input-nu" placeholder="enter your number" required /><br/>
+            <button type="submit" class="gaming-button">Submit</button>
+        </form> 
+        <div>
+            <img src="code.webp" alt="tagging html" title="tagging html" width="800" height="235"/>
+        </div>
+    </body>
+</html>
